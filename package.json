@@ -1,6 +1,6 @@
 {
   "name": "movsci",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ascii movie stream",
   "main": "index.mjs",
   "bin": {
