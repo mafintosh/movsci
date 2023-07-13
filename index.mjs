@@ -14,16 +14,17 @@ if (!k) {
 const core = new Hypercore('./movsci', k)
 const swarm = new Hyperswarm()
 
+swarm.on('connection', c => core.replicate(c))
+
 await core.ready()
 
-swarm.on('connection', c => core.replicate(c))
 swarm.join(core.discoveryKey)
 
 goodbye(() => swarm.destroy())
 
 const start = Number(process.argv[3]) || 0
 
-const stream = core.createReadStream({ start })
+const stream = core.createReadStream({ start, live: true })
 
 let prev = 0
 for await (const data of stream) {
