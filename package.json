@@ -1,0 +1,24 @@
+{
+  "name": "movsci",
+  "version": "0.0.0",
+  "description": "ascii movie stream",
+  "main": "index.mjs",
+  "bin": {
+    "movsci": "./index.mjs"
+  },
+  "dependencies": {
+    "graceful-goodbye": "^1.3.0",
+    "hypercore": "^10.17.0",
+    "hyperswarm": "^4.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafintosh/movsci.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/movsci/issues"
+  },
+  "homepage": "https://github.com/mafintosh/movsci#readme"
+}
